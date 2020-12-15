@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "snyk test",
     "security:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm",
-    "security:gitleaks": "docker run --rm -i -v \"$(pwd)\"/:/code/ zricethezav/gitleaks:v7.2.0 -v --verbose --path=/code"
+    "security:gitleaks": "docker run --rm -i -v \"$(pwd)\"/:/code/ zricethezav/gitleaks:v7.2.0 -v --verbose --path=/code",
+    "security:dependencies": "npm audit && snyk test"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/UlisesGascon/useful-npm-scripts#readme",
   "devDependencies": {
-    "lockfile-lint": "^4.3.7"
+    "lockfile-lint": "^4.3.7",
+    "snyk": "^1.437.1"
   }
 }
