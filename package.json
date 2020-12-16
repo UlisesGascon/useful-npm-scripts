@@ -2,9 +2,9 @@
   "name": "useful-npm-scripts",
   "version": "1.0.0",
   "description": "A collection of useful npm scripts",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/server.js",
     "test": "snyk test",
     "security:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm",
     "security:gitleaks": "docker run --rm -i -v \"$(pwd)\"/:/code/ zricethezav/gitleaks:v7.2.0 -v --verbose --path=/code",
@@ -23,5 +23,8 @@
   "devDependencies": {
     "lockfile-lint": "^4.3.7",
     "snyk": "^1.437.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
