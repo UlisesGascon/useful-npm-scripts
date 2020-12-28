@@ -2,6 +2,10 @@
 
 A collection of useful npm scripts
 
+## :gear: Development tasks
+
+- `npm run dev` watch for changes in files and relaunch the service, using [Nodemon](https://www.npmjs.com/package/nodemon).
+
 ## :flashlight: Linting tasks
 
 - `npm run lint` review the files
