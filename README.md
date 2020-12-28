@@ -1,7 +1,7 @@
 # useful-npm-scripts
 A collection of useful npm scripts
 
-## :shield: Testing tasks
+## 🧪  Testing tasks
 
 - `npm run test` runs all the tests once
 - `npm run test:coverage` runs the tests and generates a coverage table and HTML report.
