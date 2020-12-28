@@ -2,7 +2,7 @@
   "name": "useful-npm-scripts",
   "version": "1.0.0",
   "description": "A collection of useful npm scripts",
-  "main": "src/server.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/server.js",
     "test": "jest --verbose",

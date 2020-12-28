@@ -1,12 +1,10 @@
 const express = require('express')
-const app = express()
+const server = express()
 const port = process.env.PORT || 5000
-const {name, version} = require('../package.json')
+const { name, version } = require('../package.json')
 
-app.get('/', (req, res) => {
-  res.send(`Hello and welcome to ${name}@${version}!`)
+server.get('/__/health', (req, res) => {
+  res.json({name, version, status: "ok"})
 })
 
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`)
-})
+module.exports = server
