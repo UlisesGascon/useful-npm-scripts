@@ -1,5 +1,11 @@
 # useful-npm-scripts
+
 A collection of useful npm scripts
+
+## :flashlight: Linting tasks
+
+- `npm run lint` review the files
+- `npm run lint:fix` review all the files and autofix them.
 
 ## 🧪  Testing tasks
 
