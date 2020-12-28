@@ -5,7 +5,9 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "test": "snyk test",
+    "test": "jest --verbose",
+    "test:coverage": "jest --verbose  --coverage",
+    "test:watch": "jest --verbose --watchAll",
     "security": "run-p security:gitleaks security:lockfile security:dependencies security:docker",
     "security:lockfile": "lockfile-lint --path package-lock.json --type npm --validate-https --allowed-hosts npm",
     "security:gitleaks": "docker run --rm -i -v \"$(pwd)\"/:/code/ zricethezav/gitleaks:v7.2.0 -v --verbose --path=/code",
@@ -23,9 +25,11 @@
   },
   "homepage": "https://github.com/UlisesGascon/useful-npm-scripts#readme",
   "devDependencies": {
+    "jest": "^26.6.3",
     "lockfile-lint": "^4.3.7",
     "npm-run-all": "^4.1.5",
-    "snyk": "^1.437.1"
+    "snyk": "^1.437.1",
+    "supertest": "^6.0.1"
   },
   "dependencies": {
     "express": "^4.17.1"
